@@ -19,6 +19,10 @@ function App() {
     alert(`Task ${todos[index]} is completed`)
   }
 
+  const handleEditButton = (index) => {
+    alert(`You are editing task ${todos[index]}`)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -28,14 +32,17 @@ function App() {
       <div className="Todo-list">
         <ul>
           {todos.map((todo, index) => (
-            <li key={index}>
+            <li key={index} className="Todo-item">
                 <input 
                   type="checkbox"
                   onChange={() => checkboxClicked(index)}
                 />
+                {todo}
+                <button className="Edit-task" onClick={() => handleEditButton(index)}>
+                  <img src="/info.png" alt="Edit" style={{ width: '25px', height: 'px' }} />
+                </button>
 
-                <button className="edit-task">Edit</button>
-            {todo}</li>
+            </li>
           ))}
         </ul>
           <div>
@@ -45,7 +52,7 @@ function App() {
               onChange={e => setInput(e.target.value)}
               placeholder="Add New Task" 
              />
-            <button className="Add-task"onClick={addTodo}>Add Task</button>
+            <button className="Add-task" onClick={addTodo}>Add Task</button>
           </div>
       </div>
     </div>

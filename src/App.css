@@ -1,0 +1,44 @@
+.App {
+  /* text-align: center; */
+}
+
+.App-header {
+  background:linear-gradient(to right,blue, white);
+  padding: 20px;
+  color: white;
+}
+
+.Todo-list {
+  margin: 20px;
+}
+
+.Add-todo {
+  padding: 10px;
+  margin-left: 20px;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.Input-task {
+  padding: 10px;
+  margin: 10px;
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.Add-task {
+  padding: 10px;
+  margin: 10px;
+  border: #ccc 1px solid;
+  border-radius: 5px;
+}
